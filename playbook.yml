@@ -1,0 +1,47 @@
+- hosts: localhost
+  connection: local
+
+  tasks:
+  - name: Update homebrew itself first
+    homebrew: update_homebrew=yes
+
+  - name: Install homebrew packages
+    homebrew: name={{ item }}
+    with_items:
+      - git
+      - openssl
+      - wget
+      - curl
+      - fish
+      - graphviz
+      - tig
+      - tmux
+      - elixir
+
+  - name: Add homebrew tap repositories
+    homebrew_tap: tap={{ item }} state=present
+    with_items: 
+      - caskroom/cask
+
+  - name: Install Homebrew cask packages
+    homebrew_cask: name={{ item }}
+    with_items:
+      - kindle
+      - vlc
+      - skype
+      - docker
+      - camtwist
+      - obs
+      - astah-community
+      - google-japanese-ime
+      - iterm2
+      - google-chrome
+      - vagrant
+      - silverlight
+      - flash-player
+      - google-cloud-sdk
+      - discord
+      - etcher
+      - psequel
+      - sequel-pro
+      - visual-studio-code
