@@ -1,3 +1,4 @@
+---
 - hosts: localhost
   connection: local
 
@@ -17,15 +18,25 @@
       - tig
       - tmux
       - elixir
+      - haskell-stack
+      - neovim/neovim/neovim
+      - awscli
+      - rmtrash
+      - exa
+      - the_silver_searcher
+      - highway
 
   - name: Add homebrew tap repositories
     homebrew_tap: tap={{ item }} state=present
-    with_items: 
+    with_items:
       - caskroom/cask
+      - tkengo/highway
 
   - name: Install Homebrew cask packages
     homebrew_cask: name={{ item }}
     with_items:
+      - java
+      - android-studio
       - kindle
       - vlc
       - skype
@@ -45,3 +56,5 @@
       - psequel
       - sequel-pro
       - visual-studio-code
+      - amazon-drive
+      - kitematic
