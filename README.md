@@ -17,3 +17,10 @@ brew install ansible
 ```
 ansible-playbook -K playbook.yml
 ```
+
+4 fish setup
+
+```
+curl -L https://get.oh-my.fish | fish
+omf install rbenv peco nvm
+```

@@ -24,13 +24,14 @@
       - rmtrash
       - exa
       - the_silver_searcher
-      - highway
+      - rbenv
+      - peco
+      - nvm
 
   - name: Add homebrew tap repositories
     homebrew_tap: tap={{ item }} state=present
     with_items:
       - caskroom/cask
-      - tkengo/highway
 
   - name: Install Homebrew cask packages
     homebrew_cask: name={{ item }}
