@@ -59,3 +59,12 @@
       - visual-studio-code
       - amazon-drive
       - kitematic
+
+  - name: visual studio code install extension
+    raw: "code --install-extension {{ item }}"
+    with_items:
+      - vscodevim.vim
+      - PeterJausovec.vscode-docker
+      - castwide.solargraph
+      - rebornix.ruby
+      - yzhang.markdown-all-in-one
