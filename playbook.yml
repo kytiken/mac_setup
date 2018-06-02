@@ -67,6 +67,11 @@
       - PeterJausovec.vscode-docker
       - castwide.solargraph
       - yzhang.markdown-all-in-one
+      - dzannotti.vscode-babel-coloring
+      - msjsdiag.debugger-for-chrome
+      - CraigMaslowski.erb
+      - ionutvmi.path-autocomplete
+      - robertohuertasm.vscode-icons
 
   - name: setup lang env value
     file:
