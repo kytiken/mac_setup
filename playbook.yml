@@ -51,9 +51,9 @@
       - silverlight
       - flash-player
       - google-cloud-sdk
-      - discord
-      - etcher
-      - psequel
+      # - discord
+      # - etcher
+      # - psequel
       - sequel-pro
       - visual-studio-code
       - amazon-drive
