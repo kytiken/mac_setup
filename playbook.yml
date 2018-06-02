@@ -26,7 +26,6 @@
       - the_silver_searcher
       - rbenv
       - peco
-      - nvm
 
   - name: Add homebrew tap repositories
     homebrew_tap: tap={{ item }} state=present
