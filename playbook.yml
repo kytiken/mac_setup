@@ -58,6 +58,7 @@
       - visual-studio-code
       - amazon-drive
       - kitematic
+      - hyper
 
   - name: visual studio code install extension
     raw: "code --install-extension {{ item }}"
