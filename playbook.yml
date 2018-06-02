@@ -67,3 +67,16 @@
       - PeterJausovec.vscode-docker
       - castwide.solargraph
       - yzhang.markdown-all-in-one
+
+  - name: setup lang env value
+    file:
+      src: "{{ansible_env.PWD}}/fish/lang.fish"
+      dest: $HOME/.config/fish/conf.d/lang.fish
+      state: link
+
+  - name: setup n env value
+    file:
+      src: "{{ansible_env.PWD}}/fish/n.fish"
+      dest: $HOME/.config/fish/conf.d/n.fish
+      state: link
+
