@@ -3,6 +3,12 @@
   connection: local
 
   tasks:
+  - name: Add homebrew tap repositories
+    homebrew_tap: tap={{ item }} state=present
+    with_items:
+      # - caskroom/cask
+      - moncho/dry
+
   - name: Update homebrew itself first
     homebrew: update_homebrew=yes
 
@@ -26,11 +32,7 @@
       - the_silver_searcher
       - rbenv
       - peco
-
-  - name: Add homebrew tap repositories
-    homebrew_tap: tap={{ item }} state=present
-    with_items:
-      - caskroom/cask
+      - dry
 
   - name: Install Homebrew cask packages
     homebrew_cask: name={{ item }}
@@ -59,6 +61,7 @@
       - amazon-drive
       - kitematic
       - hyper
+      - spectacle
 
   - name: visual studio code install extension
     raw: "code --install-extension {{ item }}"
