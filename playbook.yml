@@ -34,6 +34,7 @@
       - rbenv
       - peco
       - dry
+      - imagemagick
 
   - name: Install Homebrew cask packages
     homebrew_cask: name={{ item }}
@@ -59,10 +60,11 @@
       # - psequel
       - sequel-pro
       - visual-studio-code
-      - amazon-drive
+      # - amazon-drive
       - kitematic
       - hyper
       - spectacle
+      - clipy
 
   - name: visual studio code install extension
     raw: "code --install-extension {{ item }}"
