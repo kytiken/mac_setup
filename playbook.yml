@@ -67,6 +67,7 @@
       - spectacle
       - clipy
       - karabiner-elements
+      - mongodb-compass
 
   - name: mac app store
     raw: "mas install {{ item }}"
