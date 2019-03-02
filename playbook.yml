@@ -36,6 +36,8 @@
       - dry
       - imagemagick
       - mas
+      - postgresql
+      - terraform
 
   - name: Install Homebrew cask packages
     homebrew_cask: name={{ item }}
@@ -68,6 +70,9 @@
       - clipy
       - karabiner-elements
       - mongodb-compass
+      - postman
+      - insomnia
+      - alfred
 
   - name: mac app store
     raw: "mas install {{ item }}"
