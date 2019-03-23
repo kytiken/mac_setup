@@ -15,7 +15,7 @@ brew install ansible
 3 execute playbook
 
 ```
-ansible-playbook -K playbook.yml
+ansible-playbook -i hosts -K playbook.yml
 ```
 
 4 fish setup
