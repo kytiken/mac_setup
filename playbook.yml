@@ -73,6 +73,7 @@
         - insomnia
         - alfred
         - postico
+        - rubymine
 
   - name: mac app store
     raw: "mas install {{ item }}"
