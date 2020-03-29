@@ -6,7 +6,6 @@
   - name: Add homebrew tap repositories
     homebrew_tap: tap={{ item }} state=present
     with_items:
-      - moncho/dry
       - buo/cask-upgrade
 
   - name: Update homebrew itself first
@@ -20,97 +19,86 @@
         - wget
         - curl
         - fish
-        - graphviz
         - tig
         - tmux
-        - elixir
-        - haskell-stack
         - neovim/neovim/neovim
         - awscli
-        - rmtrash
-        - exa
-        - the_silver_searcher
-        - rbenv
-        - peco
-        - dry
         - imagemagick
         - mas
-        - postgresql
-        - terraform
-        - pulumi
+        # - rbenv
 
   - name: Install Homebrew cask packages
     homebrew_cask:
       name:
-        - java
-        - android-studio
-        - kindle
-        - vlc
-        - skype
-        - docker
-        - camtwist
-        - obs
-        - astah-community
-        - google-japanese-ime
-        - iterm2
         - google-chrome
-        - vagrant
-        - silverlight
-        - flash-player
-        - google-cloud-sdk
-        # - discord
-        # - etcher
-        # - psequel
-        - sequel-pro
-        - visual-studio-code
-        # - amazon-drive
-        - kitematic
-        - hyper
-        - spectacle
+        - alfred
         - clipy
+        - iterm2
+        - visual-studio-code
+        - docker
+        - google-japanese-ime
+        - google-cloud-sdk
+        - sequel-pro
         - karabiner-elements
         - mongodb-compass
         - postman
         - insomnia
-        - alfred
         - postico
-        - rubymine
+        # - java
+        # - android-studio
+        # - kindle
+        # - vlc
+        # - skype
+        # - camtwist
+        # - obs
+        # - astah-community
+        # - vagrant
+        # - silverlight
+        # - flash-player
+        # - discord
+        # - etcher
+        # - psequel
+        # - amazon-drive
+        # - kitematic
+        # - hyper
+        # - spectacle
+        # - rubymine
+
 
   - name: mac app store
     raw: "mas install {{ item }}"
     with_items:
-      - 1333542190 # 1Password 7
-      - 668208984 # GIPHY CAPTURE
-      - 497799835 # Xcode
       - 803453959 # Slack
-      - 439654198 # SimpleMind Lite
       - 441258766 # Magnet
-      - 425424353 # The Unarchiver
-      - 1384080005 #Tweetbot 
-      - 1427496069 # TeamSQL
+      # - 439654198 # SimpleMind Lite
+      # - 425424353 # The Unarchiver
+      # - 1384080005 #Tweetbot 
+      # - 1427496069 # TeamSQL
+      # - 1333542190 # 1Password 7
+      # - 668208984 # GIPHY CAPTURE
+      # - 497799835 # Xcode
 
   - name: visual studio code install extension
     raw: "code --install-extension {{ item }}"
     with_items:
       - vscodevim.vim
-      - PeterJausovec.vscode-docker
-      - castwide.solargraph
-      - yzhang.markdown-all-in-one
-      - dzannotti.vscode-babel-coloring
-      - msjsdiag.debugger-for-chrome
-      - CraigMaslowski.erb
       - ionutvmi.path-autocomplete
-      - robertohuertasm.vscode-icons
+      #- robertohuertasm.vscode-icons
+      # - PeterJausovec.vscode-docker
+      # - castwide.solargraph
+      # - yzhang.markdown-all-in-one
+      # - dzannotti.vscode-babel-coloring
+      # - msjsdiag.debugger-for-chrome
+      # - CraigMaslowski.erb
+  # - name: setup lang env value
+  #   file:
+  #     src: "{{ansible_env.PWD}}/fish/lang.fish"
+  #     dest: $HOME/.config/fish/conf.d/lang.fish
+  #     state: link
 
-  - name: setup lang env value
-    file:
-      src: "{{ansible_env.PWD}}/fish/lang.fish"
-      dest: $HOME/.config/fish/conf.d/lang.fish
-      state: link
-
-  - name: setup n env value
-    file:
-      src: "{{ansible_env.PWD}}/fish/n.fish"
-      dest: $HOME/.config/fish/conf.d/n.fish
-      state: link
+  # - name: setup n env value
+  #   file:
+  #     src: "{{ansible_env.PWD}}/fish/n.fish"
+  #     dest: $HOME/.config/fish/conf.d/n.fish
+  #     state: link
 
