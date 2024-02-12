@@ -25,7 +25,7 @@
         - awscli
         - imagemagick
         - mas
-        # - rbenv
+        - asdf
 
   - name: Install Homebrew cask packages
     homebrew_cask:
@@ -37,32 +37,13 @@
         - visual-studio-code
         - docker
         - google-japanese-ime
+        - notion
         - google-cloud-sdk
-        - sequel-pro
-        - karabiner-elements
-        - mongodb-compass
-        - postman
-        - insomnia
-        - postico
-        # - java
-        # - android-studio
+        # - insomnia
+        # - postico
         # - kindle
-        # - vlc
-        # - skype
-        # - camtwist
-        # - obs
-        # - astah-community
-        # - vagrant
-        # - silverlight
-        # - flash-player
         # - discord
         # - etcher
-        # - psequel
-        # - amazon-drive
-        # - kitematic
-        # - hyper
-        # - spectacle
-        # - rubymine
 
 
   - name: mac app store
@@ -70,35 +51,9 @@
     with_items:
       - 803453959 # Slack
       - 441258766 # Magnet
-      # - 439654198 # SimpleMind Lite
-      # - 425424353 # The Unarchiver
-      # - 1384080005 #Tweetbot 
-      # - 1427496069 # TeamSQL
-      # - 1333542190 # 1Password 7
-      # - 668208984 # GIPHY CAPTURE
-      # - 497799835 # Xcode
 
   - name: visual studio code install extension
     raw: "code --install-extension {{ item }}"
     with_items:
       - vscodevim.vim
       - ionutvmi.path-autocomplete
-      #- robertohuertasm.vscode-icons
-      # - PeterJausovec.vscode-docker
-      # - castwide.solargraph
-      # - yzhang.markdown-all-in-one
-      # - dzannotti.vscode-babel-coloring
-      # - msjsdiag.debugger-for-chrome
-      # - CraigMaslowski.erb
-  # - name: setup lang env value
-  #   file:
-  #     src: "{{ansible_env.PWD}}/fish/lang.fish"
-  #     dest: $HOME/.config/fish/conf.d/lang.fish
-  #     state: link
-
-  # - name: setup n env value
-  #   file:
-  #     src: "{{ansible_env.PWD}}/fish/n.fish"
-  #     dest: $HOME/.config/fish/conf.d/n.fish
-  #     state: link
-
