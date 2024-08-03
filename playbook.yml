@@ -25,8 +25,6 @@
           - ghq
           - mysql-client@8.0
           - oven-sh/bun/bun
-          - mecab
-          - mecab-ipadic
           - aws-sam-cli
 
     - name: Install Homebrew cask packages
