@@ -31,7 +31,6 @@
       homebrew_cask:
         name:
           - google-chrome
-          - alfred
           - iterm2
           - visual-studio-code
           - docker
