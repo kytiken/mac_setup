@@ -3,57 +3,57 @@
   connection: local
 
   tasks:
-  - name: Add homebrew tap repositories
-    homebrew_tap: tap={{ item }} state=present
-    with_items:
-      - buo/cask-upgrade
+    - name: Tap homebrew
+      homebrew_tap:
+        name:
+          - oven-sh/bun
+          - homebrew/cask-fonts
 
-  - name: Update homebrew itself first
-    homebrew: update_homebrew=yes
+    - name: Install homebrew packages
+      homebrew:
+        name:
+          - git
+          - openssl
+          - wget
+          - curl
+          - fish
+          - tig
+          - tmux
+          - awscli
+          - imagemagick
+          - asdf
+          - ghq
+          - mysql-client@8.0
+          - oven-sh/bun/bun
+          - mecab
+          - mecab-ipadic
+          - aws-sam-cli
 
-  - name: Install homebrew packages
-    homebrew:
-      name:
-        - git
-        - openssl
-        - wget
-        - curl
-        - fish
-        - tig
-        - tmux
-        - neovim/neovim/neovim
-        - awscli
-        - imagemagick
-        - mas
-        - asdf
-
-  - name: Install Homebrew cask packages
-    homebrew_cask:
-      name:
-        - google-chrome
-        - alfred
-        - clipy
-        - iterm2
-        - visual-studio-code
-        - docker
-        - google-japanese-ime
-        - notion
-        - google-cloud-sdk
-        # - insomnia
-        # - postico
-        # - kindle
-        # - discord
-        # - etcher
-
-
-  - name: mac app store
-    raw: "mas install {{ item }}"
-    with_items:
-      - 803453959 # Slack
-      - 441258766 # Magnet
-
-  - name: visual studio code install extension
-    raw: "code --install-extension {{ item }}"
-    with_items:
-      - vscodevim.vim
-      - ionutvmi.path-autocomplete
+    - name: Install Homebrew cask packages
+      homebrew_cask:
+        name:
+          - google-chrome
+          - alfred
+          - clipy
+          - iterm2
+          - visual-studio-code
+          - docker
+          - google-japanese-ime
+          - notion
+          - google-cloud-sdk
+          - 1password
+          - 1password-cli
+          - kindle
+          - spotify
+          - gyazo
+          - mysql-shell
+          - font-source-code-pro
+          - pocket-casts
+          - bing-wallpaper
+          - rectangle
+          - vmware-fusion
+          - devtoys
+          - cloudflare-warp
+          - chatgpt
+          - microsoft-edge
+          - zed
