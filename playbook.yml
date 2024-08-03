@@ -34,7 +34,6 @@
         name:
           - google-chrome
           - alfred
-          - clipy
           - iterm2
           - visual-studio-code
           - docker
