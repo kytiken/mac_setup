@@ -7,7 +7,6 @@
       homebrew_tap:
         name:
           - oven-sh/bun
-          - homebrew/cask-fonts
 
     - name: Install homebrew packages
       homebrew:
@@ -51,3 +50,4 @@
           - zed
           - raycast
           - arc
+          - raindropio
