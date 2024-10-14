@@ -1,26 +1,52 @@
 # Mac setup
 
-1 install homebrew
+## install
 
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+1. install homebrew
+
+   ```
+   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   ```
+
+1. install ansible
+
+   ```
+   brew install ansible
+   ```
+
+1. execute playbook
+
+   ```
+   ansible-playbook -i hosts -K playbook.yml
+   ```
+
+1. fish setup
+
+   - install fisher
+     - [GitHub - jorgebucaran/fisher: A plugin manager for Fish](https://github.com/jorgebucaran/fisher)
+
+1. install fish plugin
+
+   ```
+   cat fish_plugins | fisher install
+   ```
+
+1. configure asdf
+
+   ```
+   cat asdf_plugins | xargs -IPLUGIN_NAME asdf plugin add PLUGIN_NAME
+   ```
+
+## update plugin files
+
+### fish_plugins
+
+```shell
+fisher list > fish_plugins
 ```
 
-2 install ansible
+### asdf_plugins
 
-```
-brew install ansible
-```
-
-3 execute playbook
-
-```
-ansible-playbook -i hosts -K playbook.yml
-```
-
-4 fish setup
-
-```
-curl -L https://get.oh-my.fish | fish
-omf install rbenv peco nvm
+```shell
+asdf plugin list > asdf_plugins
 ```
