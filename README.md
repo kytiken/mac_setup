@@ -28,13 +28,13 @@
 1. install fish plugin
 
    ```
-   cat fish_plugins | fisher install
+   cat plugins/fish_plugins | fisher install
    ```
 
 1. configure asdf
 
    ```
-   cat asdf_plugins | xargs -IPLUGIN_NAME asdf plugin add PLUGIN_NAME
+   cat plugins/asdf_plugins | xargs -IPLUGIN_NAME asdf plugin add PLUGIN_NAME
    ```
 
 ## update plugin files
@@ -42,11 +42,11 @@
 ### fish_plugins
 
 ```shell
-fisher list > fish_plugins
+fisher list > plugins/fish_plugins
 ```
 
 ### asdf_plugins
 
 ```shell
-asdf plugin list > asdf_plugins
+asdf plugin list > plugins/asdf_plugins
 ```
