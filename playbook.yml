@@ -20,6 +20,7 @@
           - mysql-client@8.0
           - aws-sam-cli
           - fzf
+          - ghostty
 
     - name: Install Homebrew cask packages
       homebrew_cask:
@@ -27,7 +28,6 @@
           - google-chrome
           - iterm2
           - visual-studio-code
-          - docker
           - notion
           - google-cloud-sdk
           - 1password
@@ -36,6 +36,9 @@
           - gyazo
           - mysql-shell
           - font-source-code-pro
+          - font-noto-sans-jp
+          - font-noto-sans-cjk-jp
+          - font-powerline-symbols
           - pocket-casts
           - vmware-fusion
           - devtoys
@@ -46,3 +49,5 @@
           - raycast
           - arc
           - raindropio
+          - google-japanese-ime
+          - bing-wallpaper

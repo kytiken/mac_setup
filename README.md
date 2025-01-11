@@ -50,3 +50,13 @@ fisher list > plugins/fish_plugins
 ```shell
 asdf plugin list > plugins/asdf_plugins
 ```
+
+### install tpm
+
+```shell
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+```shell
+ln -s (pwd)/config_files/tmux.conf.local ~/.tmux.conf.local
+```
