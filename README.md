@@ -57,10 +57,14 @@ fisher list > plugins/fish_plugins
 asdf plugin list > plugins/asdf_plugins
 ```
 
-### install tpm
+### install oh-my-tmux
 
 ```shell
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone --single-branch https://github.com/gpakosz/.tmux.git ~/.tmux
+```
+
+```shell
+ln -s $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
 ```
 
 ```shell
