@@ -25,6 +25,12 @@
    - install fisher
      - [GitHub - jorgebucaran/fisher: A plugin manager for Fish](https://github.com/jorgebucaran/fisher)
 
+1. fix fish path
+
+   ```
+   ln -s (pwd)/config_files/0_fish_macos_set_env_path.fish ~/.config/fish/conf.d/0_fish_macos_set_env_path.fish
+   ```
+
 1. install fish plugin
 
    ```
