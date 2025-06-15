@@ -1,0 +1,24 @@
+---
+- name: Update Homebrew
+  homebrew:
+    update_homebrew: true
+  tags:
+    - homebrew
+    - packages
+
+- name: Install Homebrew packages
+  homebrew:
+    name: "{{ homebrew_packages }}"
+    state: present
+  tags:
+    - homebrew
+    - packages
+
+- name: Install Homebrew cask packages
+  homebrew_cask:
+    name: "{{ homebrew_cask_packages }}"
+    state: present
+  tags:
+    - homebrew
+    - cask
+    - packages

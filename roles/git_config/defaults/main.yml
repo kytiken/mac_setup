@@ -1,0 +1,5 @@
+---
+# Default git configuration
+git_user_name: "{{ ansible_env.USER }}"
+git_user_email: ""
+git_global_config: []

@@ -1,0 +1,69 @@
+---
+# Global variables for all hosts
+homebrew_packages:
+  - git
+  - openssl
+  - wget
+  - curl
+  - fish
+  - tig
+  - tmux
+  - awscli
+  - imagemagick
+  - asdf
+  - ghq
+  - mysql-client@8.0
+  - aws-sam-cli
+  - fzf
+  - ghostty
+  - fd
+  - dagger
+  - ripgrep
+  - bat
+  - watchman
+  - delta
+
+homebrew_cask_packages:
+  - google-chrome
+  - iterm2
+  - visual-studio-code
+  - notion
+  - google-cloud-sdk
+  - 1password
+  - 1password-cli
+  - gyazo
+  - mysql-shell
+  - font-source-code-pro
+  - font-noto-sans-jp
+  - font-noto-sans-cjk-jp
+  - font-powerline-symbols
+  - pocket-casts
+  - vmware-fusion
+  - devtoys
+  - cloudflare-warp
+  - chatgpt
+  - microsoft-edge
+  - zed
+  - raycast
+  - arc
+  - raindropio
+  - google-japanese-ime
+  - bing-wallpaper
+  - cursor
+  - obsidian
+  - amazon-q
+
+git_user_name: "{{ ansible_env.USER | default('kytiken') }}"
+git_user_email: "kytiken@gmail.com"
+
+git_global_config:
+  - { name: "rebase.autostash", value: true }
+  - { name: "rebase.autoSquash", value: true }
+  - { name: "core.pager", value: "delta" }
+  - { name: "interactive.diffFilter", value: "delta --color-only" }
+  - { name: "delta.navigate", value: true }
+  - { name: "delta.light", value: false }
+
+system_preferences:
+  dock:
+    appswitcher_all_displays: true

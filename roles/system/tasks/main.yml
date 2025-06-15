@@ -1,0 +1,25 @@
+---
+- name: Configure macOS system preferences
+  community.general.osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+    state: present
+  loop:
+    - domain: com.apple.Dock
+      key: appswitcher-all-displays
+      type: bool
+      value: "{{ system_preferences.dock.appswitcher_all_displays }}"
+  tags:
+    - system
+    - preferences
+    - dock
+
+- name: Restart Dock to apply changes
+  command: killall Dock
+  changed_when: false
+  tags:
+    - system
+    - preferences
+    - dock

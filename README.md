@@ -17,7 +17,7 @@
 1. execute playbook
 
    ```
-   ansible-playbook -i hosts -K playbook.yml
+   ansible-playbook site.yml
    ```
 
 1. fish setup

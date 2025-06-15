@@ -1,0 +1,5 @@
+---
+# Default system preferences
+system_preferences:
+  dock:
+    appswitcher_all_displays: false

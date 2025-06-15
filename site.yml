@@ -1,0 +1,13 @@
+---
+- name: Mac setup playbook
+  hosts: localhost
+  gather_facts: true
+  become: false
+
+  roles:
+    - homebrew
+    - system
+    - git_config
+
+  tags:
+    - mac-setup
