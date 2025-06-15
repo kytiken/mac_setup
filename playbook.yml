@@ -21,6 +21,12 @@
           - aws-sam-cli
           - fzf
           - ghostty
+          - fd
+          - dagger
+          - ripgrep
+          - bat
+          - watchman
+          - delta
 
     - name: Install Homebrew cask packages
       homebrew_cask:
