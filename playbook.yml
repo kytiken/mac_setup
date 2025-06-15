@@ -59,3 +59,26 @@
           - cursor
           - obsidian
           - amazon-q
+
+    - name: Set appswitcher-all-displays true
+      community.general.osx_defaults:
+        domain: com.apple.Dock
+        key: appswitcher-all-displays
+        type: bool
+        value: true
+        state: present
+
+    - name: git config
+      git_config:
+        name: "{{ item.name }}"
+        value: "{{ item.value }}"
+        scope: global
+      loop:
+        - { name: "user.name", value: "kytiken" }
+        - { name: "user.email", value: "kytiken@gmail.com" }
+        - { name: "rebase.autostash", value: true }
+        - { name: "rebase.autoSquash", value: true }
+        - { name: "core.pager", value: "delta" }
+        - { name: "interactive.diffFilter", value: "delta --color-only" }
+        - { name: "delta.navigate", value: true }
+        - { name: "delta.light", value: false }
