@@ -503,3 +503,5 @@ set -g @save-complete-history-path "~/tmux-log"
 # "$@"
 # # /!\ do not remove the previous line
 # #     do not write below this line
+
+bind -n C-k send-keys -R \; send-keys C-l \; clear-history
