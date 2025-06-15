@@ -17,7 +17,7 @@
 1. execute playbook
 
    ```
-   ansible-playbook site.yml
+   ansible-playbook main.yml
    ```
 
 1. fish setup
