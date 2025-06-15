@@ -1,0 +1,5 @@
+---
+# System configuration variables
+system_preferences:
+  dock:
+    appswitcher_all_displays: true

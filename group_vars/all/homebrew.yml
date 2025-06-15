@@ -1,5 +1,5 @@
 ---
-# Global variables for all hosts
+# Homebrew package management variables
 homebrew_packages:
   - git
   - openssl
@@ -52,18 +52,3 @@ homebrew_cask_packages:
   - cursor
   - obsidian
   - amazon-q
-
-git_user_name: "{{ ansible_env.USER | default('kytiken') }}"
-git_user_email: "kytiken@gmail.com"
-
-git_global_config:
-  - { name: "rebase.autostash", value: true }
-  - { name: "rebase.autoSquash", value: true }
-  - { name: "core.pager", value: "delta" }
-  - { name: "interactive.diffFilter", value: "delta --color-only" }
-  - { name: "delta.navigate", value: true }
-  - { name: "delta.light", value: false }
-
-system_preferences:
-  dock:
-    appswitcher_all_displays: true

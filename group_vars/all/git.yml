@@ -1,0 +1,12 @@
+---
+# Git configuration variables
+git_user_name: "{{ ansible_env.USER | default('kytiken') }}"
+git_user_email: "kytiken@gmail.com"
+
+git_global_config:
+  - { name: "rebase.autostash", value: true }
+  - { name: "rebase.autoSquash", value: true }
+  - { name: "core.pager", value: "delta" }
+  - { name: "interactive.diffFilter", value: "delta --color-only" }
+  - { name: "delta.navigate", value: true }
+  - { name: "delta.light", value: false }
