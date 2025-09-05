@@ -23,6 +23,7 @@ homebrew_packages:
   - watchman
   - delta
   - gemini-cli
+  - codex
 
 homebrew_cask_packages:
   - google-chrome
