@@ -22,6 +22,7 @@ homebrew_packages:
   - bat
   - watchman
   - delta
+  - gemini-cli
 
 homebrew_cask_packages:
   - google-chrome
