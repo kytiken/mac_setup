@@ -24,21 +24,14 @@ homebrew_packages:
 
 homebrew_cask_packages:
   - google-chrome
-  - iterm2
   - visual-studio-code
-  - notion
-  - google-cloud-sdk
   - 1password
   - 1password-cli
-  - gyazo
-  - mysql-shell
   - font-source-code-pro
   - font-noto-sans-jp
   - font-noto-sans-cjk-jp
   - font-powerline-symbols
   - font-sauce-code-pro-nerd-font
-  - pocket-casts
-  - vmware-fusion
   - devtoys
   - cloudflare-warp
   - chatgpt
@@ -47,10 +40,4 @@ homebrew_cask_packages:
   - raycast
   - arc
   - raindropio
-  - google-japanese-ime
-  - bing-wallpaper
-  - cursor
   - obsidian
-  - amazon-q
-  - kiro
-  - vlc
