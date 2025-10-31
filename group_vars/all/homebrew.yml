@@ -8,22 +8,19 @@ homebrew_packages:
   - fish
   - tig
   - tmux
-  - awscli
-  - imagemagick
-  - asdf
   - ghq
   - mysql-client@8.0
-  - aws-sam-cli
   - fzf
   - ghostty
   - fd
-  - dagger
   - ripgrep
   - bat
   - watchman
   - delta
   - gemini-cli
   - codex
+  - helix
+  - zellij
 
 homebrew_cask_packages:
   - google-chrome
@@ -39,6 +36,7 @@ homebrew_cask_packages:
   - font-noto-sans-jp
   - font-noto-sans-cjk-jp
   - font-powerline-symbols
+  - font-sauce-code-pro-nerd-font
   - pocket-casts
   - vmware-fusion
   - devtoys
@@ -55,3 +53,4 @@ homebrew_cask_packages:
   - obsidian
   - amazon-q
   - kiro
+  - vlc
