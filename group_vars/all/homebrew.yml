@@ -21,6 +21,7 @@ homebrew_packages:
   - codex
   - helix
   - zellij
+  - starship
 
 homebrew_cask_packages:
   - google-chrome
@@ -33,7 +34,6 @@ homebrew_cask_packages:
   - font-powerline-symbols
   - font-sauce-code-pro-nerd-font
   - devtoys
-  - cloudflare-warp
   - chatgpt
   - microsoft-edge
   - zed
