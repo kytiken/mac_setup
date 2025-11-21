@@ -42,3 +42,4 @@ homebrew_cask_packages:
   - arc
   - raindropio
   - obsidian
+  - slack
