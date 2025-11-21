@@ -22,6 +22,7 @@ homebrew_packages:
   - helix
   - zellij
   - starship
+  - chezmoi
 
 homebrew_cask_packages:
   - google-chrome
