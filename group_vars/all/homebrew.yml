@@ -46,3 +46,4 @@ homebrew_cask_packages:
   - affinity
   - antigravity
   - rancher
+  - zen
