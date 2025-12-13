@@ -47,3 +47,4 @@ homebrew_cask_packages:
   - antigravity
   - rancher
   - zen
+  - karabiner-elements
