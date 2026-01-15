@@ -23,6 +23,15 @@ homebrew_packages:
   - zellij
   - starship
   - chezmoi
+  - yazi
+  - ffmpeg
+  - sevenzip
+  - jq
+  - poppler
+  - zoxide
+  - resvg
+  - imagemagick
+  - font-symbols-only-nerd-font
 
 homebrew_cask_packages:
   - google-chrome
@@ -47,4 +56,3 @@ homebrew_cask_packages:
   - antigravity
   - rancher
   - zen
-  - karabiner-elements
