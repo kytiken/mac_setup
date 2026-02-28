@@ -6,6 +6,10 @@
     - homebrew
     - packages
 
+- name: Tap a Homebrew repository, state present
+  homebrew_tap:
+    name: "{{ homebrew_repositories }}"
+
 - name: Install Homebrew packages
   homebrew:
     name: "{{ homebrew_packages }}"

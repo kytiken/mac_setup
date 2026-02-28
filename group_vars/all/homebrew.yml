@@ -1,5 +1,8 @@
 ---
 # Homebrew package management variables
+homebrew_repositories:
+  - manaflow-ai/cmux
+
 homebrew_packages:
   - git
   - openssl
@@ -32,6 +35,9 @@ homebrew_packages:
   - resvg
   - imagemagick
   - font-symbols-only-nerd-font
+  - yt-dlp
+  - opencode
+  - duckdb
 
 homebrew_cask_packages:
   - google-chrome
@@ -56,3 +62,7 @@ homebrew_cask_packages:
   - antigravity
   - rancher
   - zen
+  - microsoft-excel
+  - google-japanese-ime
+  - shottr
+  - cmux
