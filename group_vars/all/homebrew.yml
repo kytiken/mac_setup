@@ -54,15 +54,14 @@ homebrew_cask_packages:
   - microsoft-edge
   - zed
   - raycast
-  - arc
   - raindropio
   - obsidian
   - slack
-  - affinity
-  - antigravity
   - rancher
   - zen
   - microsoft-excel
   - google-japanese-ime
   - shottr
-  - cmux
+  - lm-studio
+  - claude-code
+  - claude
