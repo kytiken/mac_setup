@@ -1,4 +1,0 @@
----
-# Default variables for homebrew role
-homebrew_packages: []
-homebrew_cask_packages: []

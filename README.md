@@ -1,33 +1,22 @@
 # Mac setup
 
+Homebrew パッケージ・macOS 設定・dotfiles はすべて [kytiken/dotfiles](https://github.com/kytiken/dotfiles)（chezmoi）で管理している。
+
 ## install
 
 1. install homebrew
 
-   ```
-   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   ```shell
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
-1. install mise
+1. apply dotfiles
+
+   Brewfile のインストール、macOS の defaults 設定、fisher プラグインのインストールもここで実行される。
 
    ```shell
-   curl https://mise.run | sh
-   ```
-
-1. install ansible
-
-   ```shell
-   mise use pipx@latest
-   ```
-
-   ```shell
-   mise use ansible
-   ```
-
-1. execute playbook
-
-   ```
-   ansible-playbook main.yml
+   /opt/homebrew/bin/brew install chezmoi
+   chezmoi init --apply git@github.com:kytiken/dotfiles.git
    ```
 
 1. change default shell
@@ -40,41 +29,11 @@
    chsh -s $(which fish)
    ```
 
-1. ghq get
+1. import Raycast settings
 
-   ```shell
-   ghq get git@github.com:kytiken/mac_setup.git
-   ```
+   `config_files/Raycast.rayconfig` を Raycast の Import Settings & Data から読み込む。
 
-   ```
-   cd (ghq root)/github.com/kytiken/mac_setup
-   ```
+## update
 
-1. fish setup
-
-   - install fisher
-     - [GitHub - jorgebucaran/fisher: A plugin manager for Fish](https://github.com/jorgebucaran/fisher)
-
-1. install fish plugin
-
-   ```shell
-   cat plugins/fish_plugins | fisher install
-   ```
-
-1. setting dotfile
-
-   ```shell
-   chezmoi init git@github.com:kytiken/dotfiles.git
-   ```
-
-   ```shell
-   chezmoi apply
-   ```
-
-## update plugin files
-
-### fish_plugins
-
-```shell
-fisher list > plugins/fish_plugins
-```
+- Homebrew パッケージ: `chezmoi cd` で移動して `Brewfile` を編集し、`chezmoi apply`（Brewfile が変わったときだけ `brew bundle` が走る）
+- fish プラグイン: `fisher install ...` 後に `chezmoi re-add ~/.config/fish/fish_plugins`
