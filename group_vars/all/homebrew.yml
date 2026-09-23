@@ -20,7 +20,6 @@ homebrew_packages:
   - bat
   - watchman
   - delta
-  - gemini-cli
   - codex
   - helix
   - zellij
@@ -38,6 +37,15 @@ homebrew_packages:
   - yt-dlp
   - opencode
   - duckdb
+  - rtk
+  - readline
+  - sqlite3
+  - xz
+  - zlib
+  - atuin
+  - gh
+  - uutils-coreutils
+  - gnu-sed
 
 homebrew_cask_packages:
   - google-chrome
@@ -63,5 +71,7 @@ homebrew_cask_packages:
   - google-japanese-ime
   - shottr
   - lm-studio
-  - claude-code
   - claude
+  - atuin-desktop
+  - grok-build
+  - thebrowsercompany-dia
